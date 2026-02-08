@@ -5,5 +5,5 @@ listar_tarefas() {
     fi
 
     echo "===== Lista de Tarefas ====="
-    nl -w2 -s". " data/tarefas.txt
+    nl -w2 -s". " "$TASK_FILE"
 }
