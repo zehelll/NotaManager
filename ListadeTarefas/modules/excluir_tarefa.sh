@@ -3,7 +3,7 @@
 #lista as tarefas e pede ao usuário o número da tarefa que ele deseja excluir
 excluir_tarefa() {
   echo "Tarefas atuais:"
-  cat tarefas.txt
+  cat $TASK_FILE
   echo
   read -rp "Digite o número da tarefa que deseja excluir: " id
 
@@ -14,18 +14,18 @@ excluir_tarefa() {
   fi
 
 #verifica se a tarefa existe
-  if ! [ -f tarefas.txt ]; then
+  if ! [ -f $TASK_FILE ]; then
     echo "Arquivo de tarefas não encontrado."
     return
   fi
 
 #verifica se o número digitado é negativo ou se é maior do que a quantidade de tarefas existentes
-  if [ "$id" -le 0 ] || [ "$id" -gt "$(wc -l < tarefas.txt)" ]; then
+  if [ "$id" -le 0 ] || [ "$id" -gt "$(wc -l < $TASK_FILE)" ]; then
     echo "Número fora do intervalo. Por favor, digite um número válido."
     return
   fi
 
 #exclui a tarefa
-  sed -i "${id}d" tarefas.txt
+  sed -i "${id}d" $TASK_FILE
   echo "Tarefa excluída com sucesso."
 }
