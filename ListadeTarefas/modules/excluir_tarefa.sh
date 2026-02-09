@@ -30,3 +30,4 @@ excluir_tarefa() {
   sed -i "${id}d" "$TASK_FILE"
   echo "Tarefa excluída com sucesso."
 }
+
