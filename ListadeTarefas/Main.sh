@@ -16,6 +16,7 @@ source modules/exportar_tarefas.sh
 source modules/excluir_tarefa.sh
 
 while true; do
+    clear
     echo "===== TaskShell ====="
 
 echo "|====================----------------------------------======================|"                                                                                
