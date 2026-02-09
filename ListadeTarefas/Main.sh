@@ -40,7 +40,8 @@ echo "|====================----------------------------------===================
 
     case "$opcao" in
         1) adicionar_tarefa ;;
-        2) listar_tarefas ;;
+        2) listar_tarefas 
+        read -rp "Pressione Enter para continuar...";;
         3) concluir_tarefa ;;
         4) exportar_tarefas ;;
         5) excluir_tarefa ;;
