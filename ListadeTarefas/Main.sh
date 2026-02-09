@@ -6,9 +6,6 @@ export DIALOGOPTS="--colors"
 DATA_DIR="data"
 TASK_FILE="$DATA_DIR/tarefas.txt"
 
-export DIALOGRC="$PWD/.dialogrc"
-export DIALOGOPTS="--colors"
-
 mkdir -p $DATA_DIR
 touch $TASK_FILE
 
