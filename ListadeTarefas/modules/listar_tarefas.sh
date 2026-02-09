@@ -5,5 +5,7 @@ listar_tarefas() {
     fi
 
     echo "===== Lista de Tarefas ====="
+    echo "ESTADO | TAREFA | DATA | ID"
+    echo "-----------------------------------------"
     cat "$TASK_FILE"
 }

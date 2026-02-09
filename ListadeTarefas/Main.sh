@@ -39,12 +39,16 @@ echo "|====================----------------------------------===================
     read -p "Escolha uma opção: " opcao
 
     case "$opcao" in
-        1) adicionar_tarefa ;;
+        1) adicionar_tarefa 
+        read -rp "Pressione Enter para continuar...";;
         2) listar_tarefas 
         read -rp "Pressione Enter para continuar...";;
-        3) concluir_tarefa ;;
-        4) exportar_tarefas ;;
-        5) excluir_tarefa ;;
+        3) concluir_tarefa 
+        read -rp "Pressione Enter para continuar...";;
+        4) exportar_tarefas 
+        read -rp "Pressione Enter para continuar...";;
+        5) excluir_tarefa 
+        read -rp "Pressione Enter para continuar...";;
         0) echo "Saindo..."; break ;;
         *) echo "Opção inválida!" ;;
     esac
